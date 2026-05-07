@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "https://cognicare-backend.onrender.com",
+  baseURL: process.env.REACT_APP_API_URL || "https://cognicare-backend1.onrender.com",
 });
 
 // Attach JWT token to every request
