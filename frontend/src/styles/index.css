@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3 { @apply font-display; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+  }
+  .btn-secondary {
+    @apply bg-white border border-slate-200 hover:border-brand-400 text-slate-700 font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-sm;
+  }
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-6;
+  }
+  .input {
+    @apply w-full border border-slate-200 rounded-xl px-4 py-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-600 mb-1;
+  }
+  .badge-green  { @apply bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-yellow { @apply bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-orange { @apply bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-red    { @apply bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-blue   { @apply bg-brand-100 text-brand-700 px-3 py-1 rounded-full text-xs font-semibold; }
+}
+
+/* Test progress bar */
+.progress-bar {
+  transition: width 0.5s ease;
+}
+
+/* Canvas for clock drawing */
+canvas { touch-action: none; }
+
+/* Smooth page transitions */
+.page-enter { animation: slideUp 0.35s ease forwards; }
